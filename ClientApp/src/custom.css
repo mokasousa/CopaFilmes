@@ -1,5 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+:root {
+  --gray: #9b9b9b;
+  --dark-gray: #616161;
+}
+
+* {
+  margin:0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 400 14px Roboto, sans-serif;
+  background: var(--gray);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app{
+  padding: 3rem 1.5rem;
+  min-height: 100vh;
+}
+
 /* Provide sufficient contrast against white background */
-a {
+/* a {
   color: #0366d6;
 }
 
@@ -11,4 +37,4 @@ code {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
-}
+} */
