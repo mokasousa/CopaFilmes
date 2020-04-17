@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Header from './Header';
 import './SelectMovies.css'
 
 export class SelectMovies extends Component {
@@ -22,19 +24,25 @@ export class SelectMovies extends Component {
   render() {
 
     let contents = this.state.loading
-      ? <p><em>Loading...</em></p>
+      ? <p className="load-text">Carregando...</p>
       : <section className="movies-list">{ this.state.movies.sort((a,b) => a.titulo < b.titulo ? -1 : 1).map(this.createItem)}</section>; 
 
     return (
         <div>
+          <Header 
+            title="Fase de Seleção"
+            text="Selecione 8 filmes que você deseja que entrem na competição e depois pressione o botão Gerar Meu Campeonato para prosseguir."
+          />
           <section className="btn-counter-container">
-            <h3 className="counter-text">
+            <p className="counter-text">
               Selecionados
               <span>{this.state.counter} de 8 filmes</span>
-            </h3>
-            <button className="btn-submit" type="button" onClick={() => console.log("clicked")}>
-              Gerar Meu Campeonato
-            </button>
+            </p>
+            <Link to="/resultados">
+              <button className="btn-submit" type="button" onClick={() => console.log(this.state.selectedMovies)}>
+                Gerar Meu Campeonato
+              </button>
+            </Link>
           </section>
           {contents}
         </div>
@@ -48,7 +56,6 @@ export class SelectMovies extends Component {
   }
 
   choosingMovie(e, item) {
-    console.log(this.state.selectedMovies)
     return e.target.checked && this.state.selectedMovies.length < 8
       ?  this.setState({selectedMovies: [...this.state.selectedMovies, item]})
       : this.setState({selectedMovies: this.state.selectedMovies.filter(i => i.id !== item.id)})

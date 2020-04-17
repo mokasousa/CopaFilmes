@@ -10,6 +10,8 @@
 .counter-text{
     display: flex;
     flex-direction: column;
+    font-size: 1.2rem;
+    margin-bottom: 0;
 }
 
 .btn-submit {
@@ -43,6 +45,16 @@
     padding: 1rem;
     align-items: center;
     height: 4rem;
+}
+
+.load-text{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: whitesmoke;
 }
 
 .movie-info {

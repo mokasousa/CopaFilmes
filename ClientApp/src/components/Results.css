@@ -1,0 +1,27 @@
+.results{
+    margin-top: 2rem;
+}
+
+.results-podium{
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    margin: .5rem 0;
+}
+
+.results-podium--position{
+    color: whitesmoke;
+    background-color: var(--dark-gray);
+    padding: 1rem;
+    margin-right: 2rem;
+}
+
+.results-podium--position>p{
+    font-size: 2rem;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.results-podium>p{
+    margin-bottom: 0;
+}
