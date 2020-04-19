@@ -1,6 +1,6 @@
-namespace CopaFilmes
+namespace CopaFilmes.Data
 {
-    public class MoviesApi
+    public class Movies
     {
         public string id { get; set; }
         public string titulo { get; set; }
