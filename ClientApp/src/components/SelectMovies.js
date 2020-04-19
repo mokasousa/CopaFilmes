@@ -38,11 +38,24 @@ export class SelectMovies extends Component {
               Selecionados
               <span>{this.state.counter} de 8 filmes</span>
             </p>
-            <Link to="/resultados">
-              <button className="btn-submit" type="button" onClick={() => console.log(this.state.selectedMovies)}>
+            {/* <Link to="/resultados"> */}
+              <button 
+                className="btn-submit" 
+                type="button" 
+                onClick={() => {
+                  console.log(this.state.selectedMovies)
+                  // try{
+                  //   this.state.selectedMovies.map(el => fetch('/winners/getwinnermovies', {
+                  //     method: 'post',
+                  //     body: JSON.stringify(el)
+                  //   }))
+                  // } catch(err) {
+                  //   console.log(err)
+                  // }
+              }}>
                 Gerar Meu Campeonato
               </button>
-            </Link>
+            {/* </Link> */}
           </section>
           {contents}
         </div>

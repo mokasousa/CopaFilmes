@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using CopaFilmes.Data;
 using System;
 
+
 namespace CopaFilmes.Controllers
 {
     [ApiController]
@@ -19,6 +20,7 @@ namespace CopaFilmes.Controllers
         {
             try{
                 var winnermovies = _services.GetWinnerMovies();
+                //.Select .Max nota (index = 0 and index = winnermovies.Length - 1)
                 return Ok(winnermovies);
             } catch(Exception err){
                 return BadRequest(err);

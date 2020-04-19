@@ -5,6 +5,15 @@ import './Results.css'
 export class Results extends Component {
   static displayName = Results.name;
 
+  constructor(props) {
+    super(props);
+    this.state = { winners: [] };
+  }
+
+  componentDidMount() {
+    this.populateWinnerMovies();
+  }
+
   render() {
     return (
       <div>
@@ -28,5 +37,16 @@ export class Results extends Component {
         </section>
       </div>
     );
+  }
+
+  async populateWinnerMovies() {
+    console.log(winners)
+    // try{
+    //   const response = await fetch('selectedmovies/getwinnermovies');
+    //   const data = await response.json();
+    //   this.setState({ winners: data });
+    // } catch(err) {
+    //   console.log(err);
+    // }
   }
 }
