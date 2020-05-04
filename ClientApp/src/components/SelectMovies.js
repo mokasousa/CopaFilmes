@@ -43,15 +43,19 @@ export class SelectMovies extends Component {
                 className="btn-submit" 
                 type="button" 
                 onClick={() => {
-                  console.log(this.state.selectedMovies)
-                  // try{
-                  //   this.state.selectedMovies.map(el => fetch('/winners/getwinnermovies', {
-                  //     method: 'post',
-                  //     body: JSON.stringify(el)
-                  //   }))
-                  // } catch(err) {
-                  //   console.log(err)
-                  // }
+                  try{
+                    fetch(`selected/addmovies`, {
+                      method: 'post',
+                      headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify(this.state.selectedMovies)
+                    })
+                    console.log(this.state.selectedMovies)
+                  } catch(err) {
+                    console.log(err)
+                  }
               }}>
                 Gerar Meu Campeonato
               </button>

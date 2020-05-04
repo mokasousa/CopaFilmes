@@ -40,7 +40,7 @@ export class Results extends Component {
   }
 
   async populateWinnerMovies() {
-    console.log(winners)
+    console.log(this.state.winners)
     // try{
     //   const response = await fetch('selectedmovies/getwinnermovies');
     //   const data = await response.json();
