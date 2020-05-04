@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Polly;
+// using CopaFilmes.Data;
 
 namespace CopaFilmes
 {
@@ -26,10 +26,6 @@ namespace CopaFilmes
             services.AddControllers();
 
             services.AddHttpClient();
-
-            // services.AddHttpClient("API Client", client => {
-            //     client.DefaultRequestHeaders.Add("Accept", "application/json");
-            // });
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
